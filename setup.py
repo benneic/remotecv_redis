@@ -11,7 +11,6 @@ Redis image loader for remotecv which is an OpenCV worker for facial and feature
 The loader for Redis is compatible with the tc_redis.storage plugins for Thumbor.
 """,
     keywords='imaging face detection feature opencv redis thumbor storage loader',
-    description='RemoteCV Redis loader',
     author='Benn Eichhorn',
     author_email='beichhor@gmail.com',
     url='https://github.com/benneic/remotecv_redis',
