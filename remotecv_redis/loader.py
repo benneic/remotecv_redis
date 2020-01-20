@@ -12,12 +12,12 @@ def load_sync(path):
     return urllib2.urlopen(path).read()
 
 
-host = os.environ.get('REMOTECV_REDIS_HOST')
-port = os.environ.get('REMOTECV_REDIS_PORT')
-db = os.environ.get('REMOTECV_REDIS_DATABASE')
-password = os.environ.get('REMOTECV_REDIS_PASSWORD')
-http_fallback = os.environ.get('REMOTECV_REDIS_HTTP_FALLBACK', True)
-http_agent = os.environ.get('REMOTECV_REDIS_HTTP_USER_AGENT', 'RemoteCV/1')
+host = os.environ.get('REMOTECV_REDIS_LOADER_HOST', 'localhost')
+port = os.environ.get('REMOTECV_REDIS_LOADER_PORT', '6379')
+db = os.environ.get('REMOTECV_REDIS_LOADER_DATABASE', 0)
+password = os.environ.get('REMOTECV_REDIS_LOADER_PASSWORD')
+http_fallback = os.environ.get('REMOTECV_REDIS_LOADER_HTTP_FALLBACK', True)
+http_agent = os.environ.get('REMOTECV_REDIS_LOADER_HTTP_USER_AGENT', 'RemoteCV/1')
 
 
 def load_sync(path):
