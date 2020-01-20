@@ -35,4 +35,4 @@ REMOTECV_REDIS_HTTP_USER_AGENT = "RemoteCV/1"
 ## Running RemoteCV
 
 See [RemoteCV repo](https://github.com/thumbor/remotecv)
-Or use the Docker container maintaned by [MinimalCompact](https://github.com/MinimalCompact/thumbor/tree/master/remotecv) as a base image...
+or use the Docker container maintaned by [MinimalCompact](https://github.com/MinimalCompact/thumbor/tree/master/remotecv) as a base image... see [/docker/Dockerfile](https://github.com/MinimalCompact/benneic/tree/master/docker) for an example.
