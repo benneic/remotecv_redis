@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='remotecv_redis',
-    version='0.2.1',
+    version='0.2.2',
     description="Redis image loader for remotecv",
     long_description="""
 Redis image loader for remotecv which is an OpenCV worker for facial and feature recognition

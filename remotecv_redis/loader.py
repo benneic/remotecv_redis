@@ -4,6 +4,7 @@ from redis import Redis
 from remotecv.utils import config
 import urllib2
 import re
+import os
 
 import logging
 
@@ -27,19 +28,19 @@ def load_sync(path):
     Loads image from Redis
     :param string path: Path to load
     """
-    logger.info("remotecv_redis.loader: Connecting to Redis(host=%s, port=%s, db=%s, password=%s)", host, port, db, password)
+    logger.debug("remotecv_redis.loader: Connecting to Redis(host=%s, port=%s, db=%s, password=%s)", host, port, db, password)
     redis = Redis(host=host, port=port, db=db, password=password)
     image = redis.get(path)
 
     if image:
-        logger.info("remotecv_redis.loader: Loaded %s" % path)
+        logger.debug("remotecv_redis.loader: Loaded %s" % path)
         return image
 
     if http_fallback:
         if not re.match(r'^https?', path):
             path = 'http://%s' % path
         path = urllib2.unquote(path)
-        logger.warn("remotecv_redis.loader: Image not found, falling back to http with %s" % path)
+        logger.info("remotecv_redis.loader: Image not found, falling back to http with %s" % path)
 
         opener = urllib2.build_opener()
         opener.addheaders = [('User-Agent', http_agent)]
