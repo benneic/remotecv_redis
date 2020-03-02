@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='remotecv_redis',
-    version='0.2.2',
+    version='0.2.3',
     description="Redis image loader for remotecv",
     long_description="""
 Redis image loader for remotecv which is an OpenCV worker for facial and feature recognition
@@ -29,7 +29,7 @@ The loader for Redis is compatible with the tc_redis.storage plugins for Thumbor
     
     packages=find_packages(),
     install_requires=[
-        'redis>=2.10.0,<3.0.0',
+        'redis>=2.10.0,<3.0.0'
     ],
     extras_require={
     },

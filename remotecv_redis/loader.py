@@ -19,7 +19,7 @@ host = os.environ.get('REMOTECV_REDIS_LOADER_HOST', 'localhost')
 port = os.environ.get('REMOTECV_REDIS_LOADER_PORT', '6379')
 db = os.environ.get('REMOTECV_REDIS_LOADER_DATABASE', 0)
 password = os.environ.get('REMOTECV_REDIS_LOADER_PASSWORD')
-http_fallback = os.environ.get('REMOTECV_REDIS_LOADER_HTTP_FALLBACK', True)
+http_fallback = os.environ.get('REMOTECV_REDIS_LOADER_HTTP_FALLBACK','').lower() == 'true'
 http_agent = os.environ.get('REMOTECV_REDIS_LOADER_HTTP_USER_AGENT', 'RemoteCV/1')
 
 
